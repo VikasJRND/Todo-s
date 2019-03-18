@@ -4,12 +4,15 @@ class Addtodo extends Component {
     todo: ""
   };
 
-  handleclick = () => {
+  handleSubmit = () => {
     this.props.addnewtodo(this.state.todo);
+    this.setState({
+      todo: ""
+    });
   };
 
   handlechange = e => {
-    const todo = e.target.value;
+    let todo = e.target.value;
 
     this.setState({
       todo: todo
@@ -27,9 +30,10 @@ class Addtodo extends Component {
             className="form-control col-md-6"
             type="text"
             onChange={this.handlechange}
+            value={this.state.todo}
           />
           <div class="input-group-append">
-            <button onClick={this.handleclick} className="btn btn-dark">
+            <button onClick={this.handleSubmit} className="btn btn-dark">
               Add Todo
             </button>
           </div>
