@@ -4,20 +4,20 @@ import Home from "./pokitimes/Home";
 import About from "./pokitimes/About";
 import Content from "./pokitimes/Content";
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 class App1 extends Component {
   state = {};
   render() {
     return (
-      <Router>
+      <BrowserRouter>
         <div>
           <Navbar />
-          <Route path="/" exact Component={Home} />
-          <Route path="/About" Component={About} />
-          <Route path="/Content" Component={Content} />
+          <Route path="/" exact component={Home} />
+          <Route path="/About" component={About} />
+          <Route path="/Content" component={Content} />
         </div>
-      </Router>
+      </BrowserRouter>
     );
   }
 }

@@ -12,15 +12,12 @@ class Navbar extends Component {
         <ul className=" right ">
           <li>
             <Link to="/">Home</Link>
-            {/* <a href="/Home">Home</a> */}
           </li>
           <li>
-            <Link to="/">Home</Link>
-            {/* <a href="/About">About</a> */}
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/">Home</Link>
-            {/* <a href="/Content">Content</a> */}
+            <Link to="/content">Content</Link>
           </li>
         </ul>
       </nav>
